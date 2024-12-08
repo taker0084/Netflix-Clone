@@ -6,8 +6,8 @@ body {
   @apply bg-zinc-900 h-full overflow-x-hidden;
 }
 #_next {
-  @apply h_full;
+  @apply h-full;
 }
 html {
-  @apply h_full;
+  @apply h-full;
 }
