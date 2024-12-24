@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 // import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
-import prismadb from "@/libs/prismadb";
+import prismadb from "@/lib/prismadb";
 
 export async function POST(req: Request) {
   try {
