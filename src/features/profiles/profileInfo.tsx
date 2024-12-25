@@ -41,7 +41,7 @@ export default function ProfileInfo() {
                   group-hover:text-white
                 "
               >
-                {user?.currentUser.name}
+                {user?.name}
               </div>
             </div>
           </div>
