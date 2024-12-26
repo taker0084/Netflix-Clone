@@ -3,7 +3,7 @@ import OPTIONS from "@/utils/Options";
 import { redirect } from "next/navigation";
 import ProfileInfo from "../../features/profiles/profileInfo";
 
-export const Profiles: React.FC = async () => {
+export default async function Profile() {
   const session = await getServerSession(OPTIONS);
 
   // セッションがない場合、ログインページにリダイレクト
@@ -12,5 +12,4 @@ export const Profiles: React.FC = async () => {
   }
 
   return <ProfileInfo />;
-};
-export default Profiles;
+}
