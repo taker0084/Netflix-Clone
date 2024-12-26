@@ -6,7 +6,12 @@ import { useRouter } from "next/navigation";
 import useInfoModal from "@/hooks/useInfoModal";
 
 interface MovieCardProps {
-  data: Record<string, any>;
+  data: {
+    id: string; // 具体的な型を指定
+    thumbnailUrl: string; // 具体的な型を指定
+    duration: string; // 具体的な型を指定
+    genre: string; // 具体的な型を指定
+  };
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
