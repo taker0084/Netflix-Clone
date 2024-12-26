@@ -8,7 +8,7 @@ import useMovie from "@/hooks/useMovie";
 
 interface InfoModalProps {
   visible?: boolean;
-  onClose: any;
+  onClose: () => void;
 }
 const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   const [isVisible, setIsVisible] = useState(!!visible);
@@ -95,10 +95,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               <AiOutlineClose className="text-white" size={20} />
             </div>
             <div className="absolute bottom-[10%] left-10">
-              <p className="text-white text-3xl md:text-4xl h-full lg:text-5xl font-bold mb-80">
+              <p className="text-white text-3xl md:text-4xl h-full lg:text-5xl font-bold mb-8">
                 {data?.title}
               </p>
-              <div className="flex flex-row items-center gap-4 mb-4">
+              <div className="flex flex-row items-center gap-4">
                 <PlayButton movieId={data?.id} />
                 <FavoriteButton movieId={data?.id} />
               </div>

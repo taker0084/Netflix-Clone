@@ -3,7 +3,12 @@ import { isEmpty } from "lodash";
 import MovieCard from "./MovieCard";
 
 interface MovieListProps {
-  data: Record<string, any>[];
+  data: {
+    id: string; // 具体的な型を指定
+    thumbnailUrl: string; // 具体的な型を指定
+    duration: string; // 具体的な型を指定
+    genre: string; // 具体的な型を指定
+  }[];
   title: string;
 }
 const MovieList: React.FC<MovieListProps> = ({ data, title }) => {

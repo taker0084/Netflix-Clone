@@ -4,7 +4,7 @@ import useMovie from "@/hooks/useMovie";
 import { useParams, useRouter } from "next/navigation";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-const watch = () => {
+const Watch = () => {
   const router = useRouter();
   const params = useParams<{ movieId: string }>();
   const movieId = params.movieId;
@@ -45,4 +45,4 @@ const watch = () => {
     </div>
   );
 };
-export default watch;
+export default Watch;
