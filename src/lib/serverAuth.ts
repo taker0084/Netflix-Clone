@@ -1,6 +1,6 @@
 import prismadb from "@/lib/prismadb";
 import { getServerSession } from "next-auth";
-import { OPTIONS } from "@/app/api/auth/[...nextauth]/route";
+import OPTIONS from "@/utils/Options";
 
 const serverAuth = async () => {
   const session = await getServerSession(OPTIONS);
