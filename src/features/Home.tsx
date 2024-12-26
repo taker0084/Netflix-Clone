@@ -1,20 +1,21 @@
 "use client";
 
-import useCurrentUser from "@/hooks/useCurrentUser";
 import Navbar from "@/components/Navber";
-import { signOut } from "next-auth/react";
-import { useEffect, useState } from "react";
 import Billboard from "@/components/Billboard";
 import MovieList from "@/components/MovieList";
 import useMovieList from "@/hooks/useMovieList";
 import useFavorites from "@/hooks/useFavorites";
+import InfoModal from "@/components/InfoModal";
+import useInfoModal from "@/hooks/useInfoModal";
 
 export default function HomePage() {
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();
+  const { isOpen, closeModal } = useInfoModal();
 
   return (
     <div>
+      <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
       <div className="pb-40">
