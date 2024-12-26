@@ -1,4 +1,4 @@
-import { OPTIONS } from "@/app/api/auth/[...nextauth]/route";
+import OPTIONS from "@/utils/Options";
 import { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth";
 
